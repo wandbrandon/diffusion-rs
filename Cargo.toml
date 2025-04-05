@@ -1,10 +1,9 @@
 [workspace]
 members = ["sys"]
-resolver = "2"
 
 [workspace.package]
-version = "0.1.6"
-edition = "2021"
+version = "0.1.8"
+edition = "2024"
 license = "MIT"
 repository = "https://github.com/newfla/diffusion-rs"
 keywords = ["ai", "stable-diffusion", "flux"]
@@ -19,14 +18,13 @@ keywords.workspace = true
 description = "High level API for stable-diffusion.cpp"
 documentation = "https://docs.rs/diffusion-rs"
 
-
 [dependencies]
 derive_builder = "0.20.2"
-diffusion-rs-sys = { path = "sys", version = "0.1.6" }
-hf-hub = {version = "0.4.0", default-features = false, features = ["ureq"]}
-libc = "0.2.161"
+diffusion-rs-sys = { path = "sys", version = "0.1.8" }
+image = "0.25.6"
+libc = "0.2.171"
 num_cpus = "1.16.0"
-thiserror = "2.0.3"
+thiserror = "2.0.12"
 
 [features]
 cuda = ["diffusion-rs-sys/cuda"]
@@ -34,4 +32,3 @@ hipblas = ["diffusion-rs-sys/hipblas"]
 metal = ["diffusion-rs-sys/metal"]
 vulkan = ["diffusion-rs-sys/vulkan"]
 sycl = ["diffusion-rs-sys/sycl"]
-flashattn = ["diffusion-rs-sys/flashattn"]

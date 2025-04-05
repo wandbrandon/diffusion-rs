@@ -23,3 +23,7 @@ bin/act
 
 *.png
 .idea/
+models/
+images/
+
+.DS_Store
